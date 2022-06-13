@@ -63,9 +63,13 @@ function showSlides(n) {
 
 async function getRandomString() {
   const responseFromServer = await fetch('/hello');
-  const textFromResponse = await responseFromServer.text();
-
-  const dateContainer = document.getElementById('date-container');
-  dateContainer.innerText = textFromResponse;
+  const textFromResponse = await responseFromServer.json();
+  const randIndex = getRandomInt(textFromResponse.length);
+  const messageContainer = document.getElementById('message-container');
+  messageContainer.innerText = textFromResponse[randIndex];
 
 }
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
