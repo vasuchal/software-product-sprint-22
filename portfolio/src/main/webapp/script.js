@@ -60,3 +60,16 @@ function showSlides(n) {
   document.getElementById("gitlink").href=githubs[slideIndex-1]; 
 
 }
+
+async function getRandomString() {
+  const responseFromServer = await fetch('/hello');
+  const textFromResponse = await responseFromServer.json();
+  const randIndex = getRandomInt(textFromResponse.length);
+  const messageContainer = document.getElementById('message-container');
+  messageContainer.innerText = textFromResponse[randIndex];
+
+}
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
