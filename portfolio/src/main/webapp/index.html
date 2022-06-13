@@ -8,12 +8,39 @@
   </head>
   <body>
     <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+      <h1>Vasu's Portfolio</h1>
+      <p><img id="self" src="/images/vasu_chalasani.jpg" /></p>
+      <p>Hi everyone! I'm Vasu and I'm currently a junior studying Computer Science at the University of Illinois at
+           Urbana-Champaign. I am passionate about using tech to make a positive social impact and am a part of Hack4Impact, a student organization where we develop software
+        for nonprofits. </p>
+      <p>Click on the three dots to see my projects!</p>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img class ="darken" src="/images/apt.png">
+          <div class="text">Rate My Apartment</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img class ="darken" src="/images/map.png">
+          <div class="text">Falling Fruit</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img class ="darken" src="/images/audio.png">
+          <div class="text">Dynamic Audio Visualizer</div>
+        </div>
+      </div>
+      <br>
+      <hr>
+      <a href="#"><p id="gitlink"></p></a>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
     </div>
   </body>
 </html>
